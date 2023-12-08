@@ -1,0 +1,27 @@
+#accordionSidebar {
+    background-color: #00456f;
+}
+.navbar-nav, .navbar-expand{
+    background-color: #048ABF;
+}
+#card {
+    background-color:whitesmoke;
+}
+#content{
+    background-color:#e2dfdf;
+}
+
+.sticky-footer{
+    background-color: #048ABF;
+}
+.copyright{
+    color: black;
+    font-weight: bold;
+}
+span, p, b, a{
+    font-family: pt-sans sans-serif;
+    font-size: 100%;
+}
+.card-body{
+    min-width: auto;
+}

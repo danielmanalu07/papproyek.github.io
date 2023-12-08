@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/Style.css">
+    <!-- Additional styles for the CRUD table -->
+    <title>Fasilitas</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="css/sb-admin-2.min.css">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Dashboard.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Admin Panel</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="Dashboard.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Other
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="ProgramPendidikan.html">
+                    <i class="fas fa-fw fa-graduation-cap"></i>
+                    <span>Pendidikan</span></a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="Fasilitas.html">
+                    <i class="fas fa-fw fa-building"></i>
+                    <span>Fasilitas</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Lembaga.html">
+                    <i class="fas fa-fw fa-landmark"></i>
+                    <span>Lembaga</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Pengumuman.html">
+                    <i class="fas fa-fw fa-bullhorn"></i>
+                    <span>Pengumuman</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Home Page
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="../Home.html">
+                    <i class="fas fa-fw fa-sign-in-alt"></i>
+                    <span>Back to Home</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Exit
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column bg-light">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 w-auto navbar-search">
+                        <div class="input-group" id="search">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-dark" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link" href="#">
+                                <img class="img-fluid w-100" src="Img/Logo.png">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">Fasilitas</h1>
+                        <b style="color: black;">Tanggal/Waktu: <span id="tanggalwaktu"></span></b>
+                    </div>
+
+                    <!-- Add New Announcement Form -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Tambah Fasilitas</h6>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="announcementTitle">Judul Fasilitas</label>
+                                    <input type="text" class="form-control" id="announcementTitle"
+                                        placeholder="Masukkan judul Fasilitas">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="announcementDescription">Deskripsi Fasilitas</label>
+                                    <textarea class="form-control" id="announcementDescription" rows="3"
+                                        placeholder="Masukkan deskripsi Fasilitas"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="announcementImage">Gambar Fasilitas</label>
+                                    <input type="file" class="form-control-file" id="announcementImage">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-plus"></i> Tambah
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Daftar Fasilitas</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Gambar</th>
+                                            <th>Nama Fasilitas</th>
+                                            <th>Deskripsi Fasilitas</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="Img/Fas1.jpeg" alt="" class="img-thumbnail"
+                                                    style="min-width: 30%;"></td>
+                                            <td>Laboratorium</td>
+                                            <td>Definisi Laboratorium Komputasi adalah ruangan yang dilabeli sebagai
+                                                laboratorium komputasi
+                                                yang berisi sekumpulan perangkat yang terdiri atas Komputer Desktop,
+                                                Laptop, AC, projector,
+                                                printer, dan perangkat lain sesuai dengan kebutuhan dari laboratorium
+                                                yang dimaksud <br>
+                                                Fasilitas laboratorium komputasi dimaksudkan sebagai sarana kerja,
+                                                pendidikan, penelitian
+                                                maupun pengabdian pada masyarakat. Kepada para pengguna diharapkan
+                                                pengertian dan
+                                                kesadarannya untuk menjaga keutuhan dan keamanan peralatan yang ada,
+                                                serta berperan dalam
+                                                menciptakan suasana akademik yang lebih berhasil guna. Kesadaran ini
+                                                hendaknya diterapkan
+                                                terhadap semua peralatan sarana dan prasarana yang dimiliki oleh
+                                                Institut Teknologi Del dan
+                                                semua sistem komputasi lain yang dapat diakses melalui jaringan
+                                                komunikasi yang tersedia. <br>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm mb-2" data-toggle="modal"
+                                                    data-target="#updateModal">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="Img/Fas2.jpeg" alt="" class="img-thumbnail"
+                                                    style="min-width: 30%;"></td>
+                                            <td>Akomodasi
+                                            </td>
+                                            <td> Akomodasi Dosen<br>
+
+                                                Institut Teknologi Del (IT Del) menyediakan fasilitas perumahan untuk
+                                                dosen dan staf
+                                                penunjang di lingkungan kampus. Dengan tinggal di lingkungan kampus,
+                                                seluruh dosen dan staf
+                                                bisa memberikan kontribusi terbaik untuk kelancaran dan kualitas proses
+                                                akademis dan
+                                                non-akademis di IT Del. Dengan lingkungan dan fasilitas yang ergonomis,
+                                                diharapkan juga
+                                                dosen bisa mengembangkan diri secara lebih maksimal. Beberapa tipe
+                                                perumahan yang tersedia
+                                                untuk dosen dan staf (setiap bangunan di beri gambar):<br><br>
+
+                                                1. Rumah Dosen (RD), terdiri dari 8 unit rumah yang fully-furnished,
+                                                diperuntukkan untuk
+                                                dosen
+                                                yang sudah berkeluarga.<br>
+
+                                                2. Mansionette, merupakan bangunan dua lantai terdiri dari 7 two bedroom
+                                                fully-furnished
+                                                flat,
+                                                diperuntukkan untuk dosen/staf yang sudah berkeluarga.<br>
+
+                                                3. Town House, terdiri dari 8 unit fully-furnished town house,
+                                                diperuntukkan untuk dosen
+                                                yang
+                                                sudah berkeluarga.<br>
+
+                                                4. Studio, merupakan self-contained one-bedroom unit, yang diperuntukkan
+                                                untuk dosen/staf
+                                                yang
+                                                belum menikah.<br>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm mb-2" data-toggle="modal"
+                                                    data-target="#updateModal">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="Img/Fas3.jpeg" alt="" class="img-thumbnail"
+                                                    style="min-width: 30%;"></td>
+                                            <td>Kantin</td>
+                                            <td> Kantin Politeknik Informatika Del menyediakan menu makanan yang bergizi
+                                                dan sehat untuk
+                                                semua mahasiswa/i. Menu yang disediakan selalu memenuhi standard gizi,
+                                                sehingga mahasiswa
+                                                bisa melaksanakan aktifitas perkuliahan dengan sehat dan prima. Setiap
+                                                mahasiswa diwajibkan
+                                                untuk makan di kantin tiga kali setiap harinya.<br><br>
+
+                                                Untuk Sabtu sore dan hari Minggu, layanan kantin untuk mahasiswa
+                                                ditiadakan, dimana untuk
+                                                waktu tersebut, mahasiswa diperbolehkan keluar kampus (termasuk ijin
+                                                bermalam) untuk
+                                                makan.<br>
+
+                                                Dalam pelaksanaan makan, mahasiswa dilatih juga untuk memiliki manner.
+                                                Etika makan yang
+                                                berlaku adalah sebagai berikut:<br><br>
+
+                                                a. Mahasiswa berpakaian rapi dan bersih.<br>
+                                                b. Mengikuti tata cara makan yang baik (table manner):<br>
+                                                c. Menggunakan sendok dan garpu.<br>
+                                                d. Mulut tertutup rapat pada saat mengunyah makanan.<br>
+                                                e. Tidak menimbulkan bunyi dari peralatan makan.<br>
+                                                f. Berbicara sewajarnya ( tidak terlalu keras sehingga tidak mengganggu
+                                                orang lain).<br>
+                                                g. Mengambil makanan secukupnya dan menghabiskannya tanpa sisa.<br>
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm mb-2" data-toggle="modal"
+                                                    data-target="#updateModal">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><img src="Img/Fas4.jpeg" alt="" class="img-thumbnail"
+                                                    style="min-width: 30%;"></td>
+                                            <td>Perpustakaan</td>
+                                            <td>Perpustakaan Politeknik Informatika Del (PI Del) berdiri sejak tanggal 9
+                                                Januari 2002 dengan
+                                                sistem pelayanan open acces (terbuka). Selanjutnya berubah nama seiring
+                                                dengan berubahnya
+                                                status Politeknik menjadi Institut sejak tahun 2013. Perpustakaan
+                                                berganti nama menjadi
+                                                Perpustakaan Institut Teknologi Del. Perpustakaan Institut Teknologi Del
+                                                memiliki fungsi
+                                                utama yaitu fungsi pendidikan. Pengadaan koleksi dan pengembangan minat
+                                                baca internal dan
+                                                eksternal Institut Teknologi Del dilakukan sebagai bagian dari kegiatan
+                                                diseminasi kegiatan
+                                                peningkatan minat baca.<br><br>
+                                                Perpustakaan IT Del memiliki visi yaitu “Sebagai pusat informasi
+                                                terkemuka yang menyediakan
+                                                layanan informasi cetak maupun cetak dan juga penyedia layanan informasi
+                                                berteknologi
+                                                tinggi. Untuk mencapai visi dimaksud, misi yang diemban oleh
+                                                Perpustakaan IT Del adalah
+                                                sebagai berikut:
+
+                                                Menyediakan layanan pustaka yang mendukung program-program akademik dan
+                                                non akademik.
+                                                Memberikan layanan informasi cetak maupun non cetak bagi seluruh civitas
+                                                akademika PI Del
+                                                maupun kepada masyarakat umum.
+                                                Meningkatkan cara dan proses diseminasi koleksi lebih efisien dan
+                                                efektif.
+                                                Meningkatkan keragaman koleksi demi peningkatan mutu layanan
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-warning btn-sm mb-2" data-toggle="modal"
+                                                    data-target="#updateModal">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-sm">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Institut Teknologi Del 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script>
+        var dt = new Date();
+        document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleString();
+    </script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+
+</body>
+
+</html>
